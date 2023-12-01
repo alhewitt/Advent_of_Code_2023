@@ -6,7 +6,7 @@ This code takes the first and last numerical digit of each line in a file
 and combines them into an integer two digit number. Each number is added
 together to get the final result.
 
-To run, you must have an input file named 'trebuchet-input.txt' saves in
+To run, you must have an input file named 'trebuchet-input.txt' saved in
 the same directory as this script.
 '''
 
