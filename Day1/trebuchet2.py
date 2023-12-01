@@ -24,11 +24,11 @@ import numpy as np
 # This function uses the find() function to look for the index of each valid number
 def get_number(line, numbers, digit):
     if digit == 1: # If looking for the first digit, start looking from the left
-        found = np.array([[int(line.find(number)), int(numbers[number])] for number in numbers if line.find(number) != -1])
+        found = np.array([[line.find(number), numbers[number]] for number in numbers if line.find(number) != -1])
         sorted = found[found[:, 0].argsort()]
         number = sorted[0][1] # Return number with the lowest index
     elif digit == 2: # If looking for the second digit, start looking from the right
-        found = np.array([[int(line.rfind(number)), int(numbers[number])] for number in numbers if line.rfind(number) != -1])
+        found = np.array([[line.rfind(number), numbers[number]] for number in numbers if line.rfind(number) != -1])
         sorted = found[found[:, 0].argsort()]
         number = sorted[-1][1] # Return number with highest index
     return number
@@ -45,25 +45,25 @@ count = 0
 
 # Define acceptable "numbers" and their values
 numbers = {
-    "one": "1",
-    "two": "2",
-    "three": "3",
-    "four": "4",
-    "five": "5",
-    "six": "6",
-    "seven": "7",
-    "eight": "8",
-    "nine": "9",
-    "0": "0",
-    "1": "1",
-    "2": "2",
-    "3": "3",
-    "4": "4",
-    "5": "5",
-    "6": "6",
-    "7": "7",
-    "8": "8",
-    "9": "9"
+    "one": 1,
+    "two": 2,
+    "three": 3,
+    "four": 4,
+    "five": 5,
+    "six": 6,
+    "seven": 7,
+    "eight": 8,
+    "nine": 9,
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9
     }
 
 # Calculate sum of two digit numbers
